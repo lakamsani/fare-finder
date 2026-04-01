@@ -1,24 +1,18 @@
 # fare-finder
 
-A Go CLI tool that searches for the cheapest US domestic flight between two cities using Google Flights data via SerpAPI.
+A Python CLI tool that searches for the cheapest US domestic flight between two cities using Google Flights data via SerpAPI.
 
 ## Prerequisites
 
-- Go 1.21+
+- Python 3.10+
 - [SerpAPI](https://serpapi.com) account and API key
 
 ## Installation
 
 ```bash
-go install github.com/lakamsani/fare-finder@latest
-```
-
-Or build from source:
-
-```bash
 git clone https://github.com/lakamsani/fare-finder.git
 cd fare-finder
-go build -o fare-finder .
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -32,10 +26,10 @@ export SERPAPI_KEY="your_api_key_here"
 Run the tool with origin and destination city/state:
 
 ```bash
-fare-finder "San Francisco" CA "New York" NY
-fare-finder "Chicago" IL "Miami" FL
-fare-finder "Seattle" WA "Austin" TX
-fare-finder "Boston" MA "Los Angeles" CA
+python fare_finder.py "San Francisco" CA "New York" NY
+python fare_finder.py "Chicago" IL "Miami" FL
+python fare_finder.py "Seattle" WA "Austin" TX
+python fare_finder.py "Boston" MA "Los Angeles" CA
 ```
 
 ### Sample Output
@@ -59,6 +53,13 @@ Searching for flights SFO → JFK on 2024-01-15...
 ## Supported Cities
 
 The tool supports 40+ major US cities including New York, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Francisco, Seattle, Denver, Atlanta, Miami, Boston, Dallas, and many more.
+
+## Running Tests
+
+```bash
+pip install pytest
+pytest tests/
+```
 
 ## SerpAPI Free Tier
 
