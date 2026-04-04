@@ -4,21 +4,22 @@ A CLI tool to find the cheapest flights between US cities using the [SerpAPI Goo
 
 ## Requirements
 
-- Go 1.21+
+- Java 17+
+- Gradle 8+
 - A [SerpAPI](https://serpapi.com) API key
 
 ## Usage
 
 ```bash
 export SERPAPI_KEY=your_key_here
-go run . "San Francisco" CA "New York" NY
+gradle run --args='"San Francisco" CA "New York" NY'
 ```
 
-Or build first:
+Or build a fat jar first:
 
 ```bash
-go build -o fare-finder .
-./fare-finder "San Francisco" CA "New York" NY
+gradle build
+java -jar build/libs/fare-finder.jar "San Francisco" CA "New York" NY
 ```
 
 Example output:
@@ -36,7 +37,7 @@ Searching for flights SFO → JFK on 2024-01-16...
 ## Running Tests
 
 ```bash
-go test -v ./...
+gradle test
 ```
 
 ## Supported Cities
