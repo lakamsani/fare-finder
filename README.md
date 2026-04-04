@@ -64,6 +64,34 @@ The tool supports 40+ major US cities including New York, Los Angeles, Chicago, 
 
 SerpAPI offers a free tier with 100 searches per month. Each fare-finder search uses one API call. For higher usage, see [SerpAPI pricing](https://serpapi.com/pricing).
 
+## Java
+
+A faithful Java 17 port of the fare-finder CLI using Gradle.
+
+### Prerequisites
+
+- Java 17+
+- [SerpAPI](https://serpapi.com) account and API key
+
+### Build
+
+```bash
+cd java && ./gradlew build
+```
+
+### Run
+
+```bash
+export SERPAPI_KEY="your_api_key_here"
+java -jar java/build/libs/fare-finder-1.0.0.jar "San Francisco" CA "New York" NY
+```
+
+### Test
+
+```bash
+cd java && ./gradlew test
+```
+
 ## License
 
 MIT
