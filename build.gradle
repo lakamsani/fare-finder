@@ -1,0 +1,27 @@
+group = 'com.github.lakamsani'
+version = '1.0.0'
+
+tasks.register('build', Exec) {
+    description = 'Build the Go project'
+    group = 'build'
+    commandLine 'go', 'build', './...'
+}
+
+tasks.register('test', Exec) {
+    description = 'Run Go tests'
+    group = 'verification'
+    commandLine 'go', 'test', '-v', './...'
+}
+
+tasks.register('run', Exec) {
+    description = 'Run the fare-finder main program'
+    group = 'application'
+    commandLine 'go', 'run', '.'
+    // Pass args via: gradle run --args="city1 state1 city2 state2"
+    doFirst {
+        def appArgs = findProperty('args')
+        if (appArgs) {
+            commandLine = ['go', 'run', '.'] + appArgs.split(' ').toList()
+        }
+    }
+}

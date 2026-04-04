@@ -1,0 +1,7 @@
+# Go build artifacts
+fare-finder
+*.exe
+
+# Gradle
+.gradle/
+build/
