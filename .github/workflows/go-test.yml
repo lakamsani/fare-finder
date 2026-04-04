@@ -1,0 +1,30 @@
+name: Go Tests
+
+on:
+  push:
+    branches: ["go-migration"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Run tests (airports)
+        run: go test -v ./airports/...
+
+      - name: Run tests (flights)
+        run: go test -v ./flights/...
+
+      - name: Run all tests with race detector
+        run: go test -race -v ./...
+
+      - name: Build
+        run: go build -v ./...

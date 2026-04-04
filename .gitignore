@@ -1,0 +1,17 @@
+# Go binaries
+fare-finder
+*.exe
+
+# Go build cache
+/vendor/
+
+# Python leftovers
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
