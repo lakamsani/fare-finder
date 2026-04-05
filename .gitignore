@@ -1,0 +1,13 @@
+# Maven build output
+target/
+
+# Gradle build output
+build/
+.gradle/
+
+# IDE files
+*.iml
+.idea/
+.classpath
+.project
+.settings/
