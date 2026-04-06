@@ -1,0 +1,7 @@
+[project]
+name = "fare-finder"
+version = "1.0.0"
+requires-python = ">=3.11"
+
+[project.scripts]
+fare-finder = "fare_finder.main:main"
