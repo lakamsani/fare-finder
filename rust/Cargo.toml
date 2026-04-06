@@ -1,0 +1,20 @@
+[package]
+name = "fare-finder"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool to find the cheapest US domestic flight between two cities (Rust port)"
+
+[[bin]]
+name = "fare-finder"
+path = "src/main.rs"
+
+[lib]
+name = "fare_finder"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = "2"
+
+[dev-dependencies]
