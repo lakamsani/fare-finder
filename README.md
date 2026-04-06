@@ -1,44 +1,21 @@
 # fare-finder
 
-A CLI tool to find the cheapest flights between US cities using the [SerpAPI Google Flights engine](https://serpapi.com/google-flights-api).
+A CLI tool that finds the cheapest one-way flight between two US cities using the SerpAPI Google Flights engine.
 
-## Requirements
+## Build
 
-- Go 1.21+
-- A [SerpAPI](https://serpapi.com) API key
-
-## Usage
-
-```bash
-export SERPAPI_KEY=your_key_here
-go run . "San Francisco" CA "New York" NY
 ```
-
-Or build first:
-
-```bash
 go build -o fare-finder .
-./fare-finder "San Francisco" CA "New York" NY
 ```
 
-Example output:
+## Run
 
 ```
-Searching for flights SFO → JFK on 2024-01-16...
-
-🛫 Cheapest flight: SFO → JFK
-✈️  JetBlue B6 123
-💰 $189
-🕗 Departs 2024-01-16 07:00 | Arrives 2024-01-16 15:30
-⏱️  Duration: 5h 30m
+SERPAPI_KEY=<key> ./fare-finder "San Francisco" CA "New York" NY
 ```
 
-## Running Tests
+## Test
 
-```bash
-go test -v ./...
 ```
-
-## Supported Cities
-
-Covers 42 major US cities including New York (JFK), Los Angeles (LAX), Chicago (ORD), San Francisco (SFO), and more.
+go test ./...
+```
