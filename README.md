@@ -1,21 +1,21 @@
 # fare-finder
 
-A CLI tool that finds the cheapest one-way flight between two US cities using the SerpAPI Google Flights engine.
+A command-line tool for finding the cheapest one-way flights between US cities using the SerpAPI Google Flights engine.
 
-## Build
+## Install
 
 ```
-go build -o fare-finder .
+pip install -e .
 ```
 
 ## Run
 
 ```
-SERPAPI_KEY=<key> ./fare-finder "San Francisco" CA "New York" NY
+SERPAPI_KEY=<key> fare-finder "San Francisco" CA "New York" NY
 ```
 
 ## Test
 
 ```
-go test ./...
+pytest
 ```
