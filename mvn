@@ -1,0 +1,3 @@
+#!/bin/bash
+# Local mvn shim: delegates Maven lifecycle phases to Gradle.
+exec /sandbox/bin/mvn "$@"
