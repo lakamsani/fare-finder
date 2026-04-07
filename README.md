@@ -5,17 +5,17 @@ A command-line tool for finding the cheapest one-way flights between US cities u
 ## Build
 
 ```
-mvn package
+go build -o fare-finder .
 ```
 
 ## Run
 
 ```
-SERPAPI_KEY=<key> java -jar target/fare-finder-1.0-SNAPSHOT.jar "San Francisco" CA "New York" NY
+SERPAPI_KEY=<key> ./fare-finder "San Francisco" CA "New York" NY
 ```
 
 ## Test
 
 ```
-mvn test
+go test ./...
 ```
