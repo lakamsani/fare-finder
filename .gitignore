@@ -1,9 +1,6 @@
-# Maven build output
-target/
-
-# Gradle build output
-build/
-.gradle/
+# Go
+fare-finder
+*.exe
 
 # IDE files
 *.iml
@@ -11,12 +8,4 @@ build/
 .classpath
 .project
 .settings/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-.venv/
-*.egg-info/
-dist/
-.pytest_cache/
+.vscode/
