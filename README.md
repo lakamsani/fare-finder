@@ -4,30 +4,27 @@ A command-line tool for finding the cheapest one-way flights between US cities u
 
 ## Requirements
 
-- Go 1.21+
+- Node.js 18+
 - A [SerpAPI](https://serpapi.com) API key
+
+## Install
+
+```bash
+npm install
+```
 
 ## Run
 
 ```bash
 export SERPAPI_KEY=your_key_here
-cd go
-go run . "San Francisco" CA "New York" NY
-```
-
-Or build first:
-
-```bash
-cd go
-go build -o fare-finder .
-./fare-finder "San Francisco" CA "New York" NY
+npm run build
+npm start -- "San Francisco" CA "New York" NY
 ```
 
 ## Test
 
 ```bash
-cd go
-go test -v ./...
+npm test
 ```
 
 ## Supported Cities

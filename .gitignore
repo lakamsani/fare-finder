@@ -1,6 +1,6 @@
-# Go
-fare-finder
-*.exe
+# Node
+node_modules/
+dist/
 
 # IDE files
 *.iml
