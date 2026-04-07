@@ -1,0 +1,17 @@
+{
+  "name": "fare-finder",
+  "version": "1.0.0",
+  "description": "A command-line tool for finding the cheapest one-way flights between US cities using the SerpAPI Google Flights engine.",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0"
+  }
+}
